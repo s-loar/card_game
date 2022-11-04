@@ -24,3 +24,6 @@ cards-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# files specific to the project
+my_deck
