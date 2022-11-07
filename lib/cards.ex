@@ -33,7 +33,7 @@ defmodule Cards do
     Divides the deck into a hand and the remaining cards of the deck.
     The `hand_size` argument is how many cards to put into the hand.
 
-    ## Examples
+  ## Examples
 
       iex> deck = Cards.create_deck
       iex> {hand, deck} = Cards.deal(deck, 1)
@@ -64,6 +64,7 @@ defmodule Cards do
     end
   end
 
+  @spec create_hand(integer) :: {list, list}
   @doc """
     Creates a deck, shuffles that deck, and deals a hand of `hand_size`.
   """
