@@ -5,6 +5,17 @@ defmodule Cards do
 
   @doc """
     Returns a list of strings representing a deck of playing cards
+
+  ## Example
+
+    iex> Cards.create_deck
+    ["Ace of Spades", "Two of Spades", "Three of Spades", "Four of Spades",
+    "Five of Spades", "Six of Spades", "Ace of Clubs", "Two of Clubs",
+    "Three of Clubs", "Four of Clubs", "Five of Clubs", "Six of Clubs",
+    "Ace of Hearts", "Two of Hearts", "Three of Hearts", "Four of Hearts",
+    "Five of Hearts", "Six of Hearts", "Ace of Diamonds", "Two of Diamonds",
+    "Three of Diamonds", "Four of Diamonds", "Five of Diamonds", "Six of Diamonds"]
+
   """
   def create_deck do
     values = ["Ace", "Two", "Three", "Four", "Five", "Six"]
@@ -24,6 +35,12 @@ defmodule Cards do
 
   @doc """
     Returns a boolean of whether a card exists in a deck.
+
+  ## Example
+      iex> deck = Cards.create_deck
+      iex> Cards.contains?(deck, "Ace of Spades")
+      true
+
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
